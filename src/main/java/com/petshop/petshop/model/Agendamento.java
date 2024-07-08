@@ -1,11 +1,18 @@
 package com.petshop.petshop.model;
 
-
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Agendamento {
 
     @Id
@@ -26,6 +33,5 @@ public class Agendamento {
     @JoinColumn(name = "cliente_id", nullable = false)
     private Cliente cliente;
 
-
-
 }
+
